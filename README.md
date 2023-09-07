@@ -50,8 +50,6 @@ vinicius [ ~ ]$ az vm create \
 
 <details>
 <summary>Ex2</summary>
-  
-#### cloud shell bash
 ```bash
 felipe [ ~ ]$ #criando grupo de recurso
 felipe [ ~ ]$ az group create --name DimDimAppResources --location westeurope
