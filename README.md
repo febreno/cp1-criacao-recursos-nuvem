@@ -1,5 +1,53 @@
 # cp1-criacao-recursos-nuvem
 
+#### Implantação de Recursos de Aplicação Web com Azure CLI
+<details>
+<summary>Ex1</summary>
+
+```bash
+# Definir variáveis
+
+vinicius [ ~ ]$ resourceGroupName="DimDimResources"           # Nome do grupo de recursos
+location="eastus"                             # Região onde os recursos serão criados
+vmName="DimDiRM94266"                         # Nome da máquina virtual
+vmSize="Standard_DS2_v2"                      # Tamanho da máquina virtual
+image="UbuntuLTS"                             # Imagem do sistema operacional
+tags="Ambiente=Desenvolvimento Projeto=DimDimCloud" # Tags para a máquina virtual
+
+# Informações necessárias do úsuario
+
+vinicius [ ~ ]$ read -p "Nome do disco: " diskName             # Nome do disco
+read -p "Tamanho do disco em GB: " diskSizeGB  # Tamanho do disco em GB
+read -p "Nome da Rede Virtual: " vnetName      # Nome da Rede Virtual
+read -p "Nome do Grupo de Segurança de Rede: " nsgName  # Nome do Grupo de Segurança de Rede
+read -p "Nome de usuário: " username           # Nome de usuário para a VM
+read -s -p "Senha: " password                  # Solicitar senha de forma segura
+
+# Criar grupo de recursos
+
+vinicius [ ~ ]$ az group create --name $resourceGroupName --location $location
+
+# Criar máquina virtual
+
+vinicius [ ~ ]$ az vm create \
+  --resource-group $resourceGroupName \
+  --name $vmName \
+  --image $image \
+  --size $vmSize \
+  --admin-username $username \
+  --admin-password $password \
+  --authentication-type password \
+  --nsg $nsgName \
+  --vnet-name $vnetName \
+  --os-disk-size-gb $diskSizeGB \
+  --tags $tags
+
+```
+
+</details>
+  
+#### criar WebApp .net cloud shell bash
+
 <details>
 <summary>Ex2</summary>
   
