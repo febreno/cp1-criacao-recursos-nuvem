@@ -2,7 +2,7 @@
 
 #### Implantação de Recursos de Aplicação Web com Azure CLI
 <details>
-<summary>Ex1</summary>
+<summary>Ex1 (clique para abrir)</summary>
 
 ```bash
 # Definir variáveis
@@ -49,7 +49,7 @@ vinicius [ ~ ]$ az vm create \
 #### criar WebApp .net cloud shell bash
 
 <details>
-<summary>Ex2</summary>
+<summary>Ex2 (clique para abrir)</summary>
   
 ```bash
 felipe [ ~ ]$ #criando grupo de recurso
