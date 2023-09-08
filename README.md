@@ -1,7 +1,7 @@
 # cp1-criacao-recursos-nuvem
 ## cloud shell bash
 
-#### Aplicação Web com Azure CLI
+#### Implantação de VM com Azure CLI
 <details>
 <summary>Ex1 (clique para abrir)</summary>
 
@@ -47,7 +47,7 @@ vinicius [ ~ ]$ az vm create \
 
 </details>
   
-#### WebApp .net
+#### Implantação de Recursos de Aplicação Web .net com Azure CLI
 
 <details>
 <summary>Ex2 (clique para abrir)</summary>
@@ -575,7 +575,7 @@ felipe [ ~ ]$ az webapp list --resource-group DimDimAppResources
 ```
 </details>
 
-#### Microsoft CognitiveServices
+#### Implantação de Recurso IoT Hub com Azure CLI
 <details>
 <summary>Ex3 (clique para abrir)</summary>
 
@@ -613,7 +613,7 @@ Message: The account type 'IoTHub' is either invalid or unavailable in given reg
 ```
 </details>
 
-#### Computer Vision
+#### Integração do Azure Computer Vision em um App Mobile
 <details>
 <summary>Ex4 (clique para abrir)</summary>
 
