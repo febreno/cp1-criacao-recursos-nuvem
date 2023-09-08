@@ -44,7 +44,7 @@ vinicius [ ~ ]$ az vm create \
   --tags $tags
 
 vinicius [ ~ ]$ read -s -p "Senha: " password
-Senha: felipe az vm create \reate \
+Senha: vinicius az vm create \reate \
   --resource-group $resourceGroupName \
   --name $vmName \
   --image $image \
@@ -75,14 +75,14 @@ vinicius [ ~ ]$ ls -la
 total 56
 drwxr-xr-x 3 vinicius vinicius  4096 Aug 27 19:50 .
 drwxrwxrwx 3 root   root    4096 Aug 27 19:47 ..
-drwx------ 5 felipe felipe  4096 Aug 27 19:52 .azure
--rw------- 1 felipe felipe  3921 Aug 27 19:57 .bash_history
--rw-r--r-- 1 felipe felipe   178 Jul 21 17:37 .bash_logout
--rw-r--r-- 1 felipe felipe   645 Jul 21 17:37 .bash_profile
--rw-r--r-- 1 felipe felipe   985 Aug 27 19:47 .bashrc
-lrwxrwxrwx 1 felipe felipe    22 Aug 27 19:47 clouddrive -> /usr/csuser/clouddrive
--rw-r--r-- 1 felipe felipe    42 Aug 27 19:47 .tmux.conf
--rw-r--r-- 1 felipe felipe 22287 Jun 17  2022 .zshrc
+drwx------ 5 vinicius vinicius  4096 Aug 27 19:52 .azure
+-rw------- 1 vinicius vinicius  3921 Aug 27 19:57 .bash_history
+-rw-r--r-- 1 vinicius vinicius   178 Jul 21 17:37 .bash_logout
+-rw-r--r-- 1 vinicius vinicius   645 Jul 21 17:37 .bash_profile
+-rw-r--r-- 1 vinicius vinicius   985 Aug 27 19:47 .bashrc
+lrwxrwxrwx 1 vinicius vinicius    22 Aug 27 19:47 clouddrive -> /usr/csuser/clouddrive
+-rw-r--r-- 1 vinicius vinicius    42 Aug 27 19:47 .tmux.conf
+-rw-r--r-- 1 vinicius vinicius 22287 Jun 17  2022 .zshrc
 ```
 
 </details>
