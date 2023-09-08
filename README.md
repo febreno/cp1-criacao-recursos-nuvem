@@ -43,6 +43,46 @@ vinicius [ ~ ]$ az vm create \
   --os-disk-size-gb $diskSizeGB \
   --tags $tags
 
+vinicius [ ~ ]$ read -s -p "Senha: " password
+Senha: felipe az vm create \reate \
+  --resource-group $resourceGroupName \
+  --name $vmName \
+  --image $image \
+  --size $vmSize \
+  --admin-username $username \
+  --admin-password $password \
+  --authentication-type password \
+  --nsg $nsgName \
+  --vnet-name $vnetName \
+  --os-disk-size-gb $diskSizeGB \
+  --tags $tags
+Ignite (November) 2023 onwards "az vm/vmss create" command will deploy Gen2-Trusted Launch VM by default. To know more about the default change and Trusted Launch, please visit https://aka.ms/TLaD
+It is recommended to use parameter "--public-ip-sku Standard" to create new VM with Standard public IP. Please note that the default public IP used for VM creation will be changed from Basic to Standard in the future.
+Consider using the "Ubuntu2204" alias. On April 30, 2023,the image deployed by the "UbuntuLTS" alias reaches its end of life. The "UbuntuLTS" will be removed with the breaking change release of Fall 2023.
+{
+  "fqdns": "",
+  "id": "/subscriptions/5af540a5-2ea7-4479-a2fe-f509ee018f11/resourceGroups/DimDimResources/providers/Microsoft.Compute/virtualMachines/DimDiRM94266",
+  "location": "eastus",
+  "macAddress": "60-45-BD-D9-E4-99",
+  "powerState": "VM running",
+  "privateIpAddress": "10.0.0.4",
+  "publicIpAddress": "172.173.152.95",
+  "resourceGroup": "DimDimResources",
+  "zones": ""
+}
+
+vinicius [ ~ ]$ ls -la
+total 56
+drwxr-xr-x 3 vinicius vinicius  4096 Aug 27 19:50 .
+drwxrwxrwx 3 root   root    4096 Aug 27 19:47 ..
+drwx------ 5 felipe felipe  4096 Aug 27 19:52 .azure
+-rw------- 1 felipe felipe  3921 Aug 27 19:57 .bash_history
+-rw-r--r-- 1 felipe felipe   178 Jul 21 17:37 .bash_logout
+-rw-r--r-- 1 felipe felipe   645 Jul 21 17:37 .bash_profile
+-rw-r--r-- 1 felipe felipe   985 Aug 27 19:47 .bashrc
+lrwxrwxrwx 1 felipe felipe    22 Aug 27 19:47 clouddrive -> /usr/csuser/clouddrive
+-rw-r--r-- 1 felipe felipe    42 Aug 27 19:47 .tmux.conf
+-rw-r--r-- 1 felipe felipe 22287 Jun 17  2022 .zshrc
 ```
 
 </details>
