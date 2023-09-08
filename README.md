@@ -575,6 +575,44 @@ felipe [ ~ ]$ az webapp list --resource-group DimDimAppResources
 ```
 </details>
 
+#### Microsoft CognitiveServices
+<details>
+<summary>Ex3 (clique para abrir)</summary>
+
+```bash
+vinicius [ ~ ]$ #Varieavel com nome do recurso:
+vinicius [ ~ ]$ RESOURCE_NAME="DimDimIoTHubRM92895"
+vinicius [ ~ ]$ #Informar o nome do user:
+vinicius [ ~ ]$ read -p "Informe o nome do recurso: " RESOURCE_NAME
+Informe o nome do recurso: DimDimIoTHubRM92895
+vinicius [ ~ ]$ #Variavel com nome da região:
+vinicius [ ~ ]$ REGION="brazilsouth"
+vinicius [ ~ ]$ #Variavel com tipo de serviço:
+vinicius [ ~ ]$ SERVICE_TYPE="IoTHub"
+vinicius [ ~ ]$ #Variavel com camada de preço:
+vinicius [ ~ ]$ SKU="F0" 
+vinicius [ ~ ]$ #Criando o recurso
+vinicius [ ~ ]$ az group create --name DimDimIoTHubRM92895 --location brazilsouth
+{
+  "id": "/subscriptions/84633a21-b3c2-4be7-8c94-37a90bb8f650/resourceGroups/DimDimIoTHubRM92895",
+  "location": "brazilsouth",
+  "managedBy": null,
+  "name": "DimDimIoTHubRM92895",
+  "properties": {
+    "provisioningState": "Succeeded"
+  },
+  "tags": null,
+  "type": "Microsoft.Resources/resourceGroups"
+}
+vinicius [ ~ ]$ az cognitiveservices account create --resource-group DimDimIoTHubRM92895 --name DimDimIoTHubRM92895 --sku $SKU --kind $SERVICE_TYPE --location $REGION
+Resource provider 'Microsoft.CognitiveServices' used by this operation is not registered. We are registering for you.
+Registration succeeded.
+(InvalidApiSetId) The account type 'IoTHub' is either invalid or unavailable in given region.
+Code: InvalidApiSetId
+Message: The account type 'IoTHub' is either invalid or unavailable in given region.
+```
+</details>
+
 #### Computer Vision
 <details>
 <summary>Ex4 (clique para abrir)</summary>
