@@ -1,6 +1,7 @@
 # cp1-criacao-recursos-nuvem
+## cloud shell bash
 
-#### Implantação de Recursos de Aplicação Web com Azure CLI
+#### Aplicação Web com Azure CLI
 <details>
 <summary>Ex1 (clique para abrir)</summary>
 
@@ -46,7 +47,7 @@ vinicius [ ~ ]$ az vm create \
 
 </details>
   
-#### criar WebApp .net cloud shell bash
+#### WebApp .net
 
 <details>
 <summary>Ex2 (clique para abrir)</summary>
@@ -571,5 +572,108 @@ felipe [ ~ ]$ az webapp list --resource-group DimDimAppResources
     "vnetRouteAllEnabled": false
   }
 ]
+```
+</details>
+
+#### Computer Vision
+<details>
+<summary>Ex4 (clique para abrir)</summary>
+
+```bash
+vinicius [ ~ ]$ #Varieavel com nome do recurso:
+vinicius [ ~ ]$ RESOURCE_NAME="DimDimCVRM94266"
+vinicius [ ~ ]$ #Informar o nome do user:
+vinicius [ ~ ]$ read -p "Informe o nome do recurso: " RESOURCE_NAME
+Informe o nome do recurso: DimDimCVRM94266
+vinicius [ ~ ]$ #Variavel com nome da região:
+vinicius [ ~ ]$ REGION="brazilsouth"
+vinicius [ ~ ]$ #Variavel com tipo de serviço:
+vinicius [ ~ ]$ SERVICE_TYPE="ComputerVision"
+vinicius [ ~ ]$ #Tipo do serviço:
+vinicius [ ~ ]$ SERVICE_TYPE="ComputerVision"
+vinicius [ ~ ]$ #Variavel com camada de preço:
+vinicius [ ~ ]$ SKU="F0"   
+vinicius [ ~ ]$ #Criando o recurso
+vinicius [ ~ ]$ az group create --name DimDimCVRM94266 --location brazilsouth
+{
+  "id": "/subscriptions/5af540a5-2ea7-4479-a2fe-f509ee018f11/resourceGroups/DimDimCVRM94266",
+  "location": "brazilsouth",
+  "managedBy": null,
+  "name": "DimDimCVRM94266",
+  "properties": {
+    "provisioningState": "Succeeded"
+  },
+  "tags": null,
+  "type": "Microsoft.Resources/resourceGroups"
+}
+vinicius [ ~ ]$ az cognitiveservices account create --resource-group DimDimCVRM94266 --name DimDimCVRM94266 --sku $SKU --kind $SERVICE_TYPE --location $REGION
+{
+  "etag": "\"020052ab-0000-0b00-0000-64fa37b70000\"",
+  "id": "/subscriptions/5af540a5-2ea7-4479-a2fe-f509ee018f11/resourceGroups/DimDimCVRM94266/providers/Microsoft.CognitiveServices/accounts/DimDimCVRM94266",
+  "identity": null,
+  "kind": "ComputerVision",
+  "location": "brazilsouth",
+  "name": "DimDimCVRM94266",
+  "properties": {
+    "abusePenalty": null,
+    "allowedFqdnList": null,
+    "apiProperties": null,
+    "callRateLimit": null,
+    "capabilities": [
+      {
+        "name": "VirtualNetworks",
+        "value": null
+      },
+      {
+        "name": "Container",
+        "value": "ComputerVision.VideoAnalytics,ComputerVision.ComputerVisionRead,ComputerVision.ocr,ComputerVision.readfile,ComputerVision.readfiledsd,ComputerVision.recognizetext,ComputerVision.ComputerVision,ComputerVision.ocrlayoutworker,ComputerVision.ocrcontroller,ComputerVision.ocrdispatcher,ComputerVision.ocrbillingprocessor,ComputerVision.ocranalyzer,ComputerVision.ocrpagesplitter,ComputerVision.ocrapi,ComputerVision.ocrengineworker"
+      }
+    ],
+    "commitmentPlanAssociations": null,
+    "customSubDomainName": null,
+    "dateCreated": "2023-09-07T20:51:03.4616943Z",
+    "deletionDate": null,
+    "disableLocalAuth": null,
+    "dynamicThrottlingEnabled": null,
+    "encryption": null,
+    "endpoint": "https://brazilsouth.api.cognitive.microsoft.com/",
+    "endpoints": {
+      "Computer Vision": "https://brazilsouth.api.cognitive.microsoft.com/",
+      "Container": "https://brazilsouth.api.cognitive.microsoft.com/"
+    },
+    "internalId": "b9303b17a0b1460e8a188013919c0f39",
+    "isMigrated": false,
+    "locations": null,
+    "migrationToken": null,
+    "networkAcls": null,
+    "privateEndpointConnections": [],
+    "provisioningState": "Succeeded",
+    "publicNetworkAccess": "Enabled",
+    "quotaLimit": null,
+    "restore": null,
+    "restrictOutboundNetworkAccess": null,
+    "scheduledPurgeDate": null,
+    "skuChangeInfo": null,
+    "userOwnedStorage": null
+  },
+  "resourceGroup": "DimDimCVRM94266",
+  "sku": {
+    "capacity": null,
+    "family": null,
+    "name": "F0",
+    "size": null,
+    "tier": null
+  },
+  "systemData": {
+    "createdAt": "2023-09-07T20:51:02.888832+00:00",
+    "createdBy": "RM94266@fiap.com.br",
+    "createdByType": "User",
+    "lastModifiedAt": "2023-09-07T20:51:02.888832+00:00",
+    "lastModifiedBy": "RM94266@fiap.com.br",
+    "lastModifiedByType": "User"
+  },
+  "tags": null,
+  "type": "Microsoft.CognitiveServices/accounts"
+}
 ```
 </details>
