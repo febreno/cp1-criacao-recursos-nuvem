@@ -74,7 +74,7 @@ Consider using the "Ubuntu2204" alias. On April 30, 2023,the image deployed by t
 vinicius [ ~ ]$ ls -la
 total 56
 drwxr-xr-x 3 vinicius vinicius  4096 Aug 27 19:50 .
-drwxrwxrwx 3 root   root    4096 Aug 27 19:47 ..
+drwxrwxrwx 3 root     root      4096 Aug 27 19:47 ..
 drwx------ 5 vinicius vinicius  4096 Aug 27 19:52 .azure
 -rw------- 1 vinicius vinicius  3921 Aug 27 19:57 .bash_history
 -rw-r--r-- 1 vinicius vinicius   178 Jul 21 17:37 .bash_logout
