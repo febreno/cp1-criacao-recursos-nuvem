@@ -1,4 +1,4 @@
-# cp1-criacao-recursos-nuvem
+# cp2-criacao-recursos-nuvem
 ## cloud shell bash
 
 #### Implantação de VM com Azure CLI
